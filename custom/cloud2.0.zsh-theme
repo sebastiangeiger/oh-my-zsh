@@ -4,7 +4,7 @@ PROMPT='$(return_code)%{$fg_bold[green]%}%p'
 if [[ -n $SSH_CLIENT ]]; then
  PROMPT=$PROMPT" %{$fg[red]%}%n⟁%m▷"
 fi
-PROMPT=$PROMPT'%{$fg[green]%} %c %{$fg_bold[cyan]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+PROMPT=$PROMPT'%{$fg[green]%} %c %{$fg_bold[cyan]%}$(git_prompt_info)%{$fg_bold[blue]%}% %{$reset_color%}'
   
 
 function return_code(){
@@ -21,8 +21,8 @@ function remote_host(){
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}[%{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}]"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}]"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}] "
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}] "
 
 # === 2. Titles and Tabs ===========================================================================
 
