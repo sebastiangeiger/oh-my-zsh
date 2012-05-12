@@ -2,7 +2,7 @@ current_path=`pwd`
 printf '\033[0;34m%s\033[0m\n' "Upgrading Oh My Zsh"
 cd $ZSH
 
-if git merge robbyrussell master
+if git checkout robby_master && git pull && git checkout master && git merge robby_master; git checkout master
 then
   printf '\033[0;32m%s\033[0m\n' '         __                                     __   '
   printf '\033[0;32m%s\033[0m\n' '  ____  / /_     ____ ___  __  __   ____  _____/ /_  '
